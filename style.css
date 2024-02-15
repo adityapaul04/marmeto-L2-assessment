@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: #000000;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.toggle-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-btn {
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 20%;
+    height: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.toggle-btn.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.toggle-btn:not(.active) svg {
+    display: none;
+}
+
+
+#product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.product-card {
+    position: relative;
+    border-radius: 8px;
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.product-card .badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.product-details {
+    margin-bottom: 10px;
+}
+
+.product-card .title-vendor {
+    margin: 5px 0px;
+}
+
+.product-card h2 {
+    display: inline-block;
+    width: 50%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    font-size: 20px;
+    margin: 0px;
+}
+
+.product-card .product-vendor {
+    display: inline-block;
+    width: 50px;
+}
+
+.product-card p {
+    display: inline-block;
+    margin: 0;
+}
+
+.product-card p {
+    margin-left: 5px;
+}
+
+.product-card button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.product-card button:hover {
+    background-color: #555;
+}
+
+@media only screen and (max-width: 1250px) and (min-width: 890px) {
+    #product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0px;
+        margin-top: 30px;
+        padding: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    header h1{
+        font-size: 25px;
+    }
+
+    .toggle-btn {
+        width: 25%;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .product-card img {
+        width: 85%;
+        height: 250px;
+    }
+
+    .product-card h2 {
+        font-size: 18px;
+    }
+
+    .product-card p {
+        margin-left: 5px;
+        font-size: 14px;
+    }
+
+    .product-card .badge {
+        top: 15px;
+        left: 35px;
+    }
+}
